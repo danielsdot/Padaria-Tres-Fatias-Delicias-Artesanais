@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Eating Pasta";
+    src: url(Materiais/Fontes/EatingPasta/Eating\ Pasta.ttf);
+    src: url(Materiais/Fontes/EatingPasta/Eating\ Pasta.otf);
+}
+
+* {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(82deg, rgba(255, 184, 110, 1) 0%, rgb(245, 208, 143) 35%, rgba(255, 184, 110, 1) 100%);
+    background-attachment: scroll;
+    margin: auto;
+    z-index: 2;
+    color: #FFFFFF;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background: #FFFFFF;
+    text-align: center;
+    padding: 50px;
+    z-index: 1;
+}
+
+footer {
+    z-index: 1;
+    padding-top: 10px;
+    background: #FFFFFF;
+    text-align: center;
+    width:100%;
+    height:50px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.destaque {
+    float: left;
+    padding: 50px;
+    margin-left: 150px;
+}
+
+.destaque img {
+    z-index: 0;
+    display: none;
+    /* Não sei ainda como deixar a imagem baixo do texto então desativei */
+}
+
+.cliente {
+    float: right;
+    margin-top: 70px;
+    margin-right: 150px;
+}
+
+h1 {
+    font-size: 10em;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 4em;
+    margin: 0px 0px 50px 0px;
+    text-transform: uppercase;
+}
+
+h3 {
+    display: flex;
+    padding-right: 50px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.centro {
+    align-items: center;
+}
+.texto-secundario {
+    font-size: 40px;
+}
+
+.caixa-pedido-geral {
+    margin-top: 250px;
+}
+
+.caixa-cardapio {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 120px;
+    align-items: center;
+}
+
+.botao-cardapio {
+    background: #FFFFFF;
+    width: 200px;
+    height: 50px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    align-self: center;
+    align-content: center;
+    border: none;
+    color: #000000;
+    transition: all 0.2s ease-in-out;
+    font-weight: bolder;
+    font-size: 1.2em;
+
+}
+
+.botao-cardapio .icone {
+    position: absolute;
+    height: 35px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.botao-cardapio .texto {
+    transform: translateX(65px);
+}
+
+.botao-cardapio:hover .texto {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.botao-cardapio:hover .icone {
+    width: 190px;
+}
+
+.botao-cardapio:hover {
+    filter: invert();
+}
+
+.botao-cardapio:focus {
+    outline: none;
+}
+
+.botao-cardapio:active * {
+    transform: scale(0.85);
+}
+
+.botao-rede {
+    background: #FFFFFF;
+    width: 350px;
+    height: 70px;
+    margin: 4px 5px;
+    border-radius: 100px;
+    display: inline-block;
+    align-items: center;
+    font-size: 1.7em;
+    font-weight: bolder;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    color: #000000;
+    transition: all 0.2s ease-in-out;
+}
+
+.botao-rede .icone {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateY(-18px);
+}
+
+.botao-rede .texto {
+    transform: translateX(130px);
+}
+
+.botao-rede:hover .icone {
+    width: 350px;
+}
+
+.botao-rede:hover .texto {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.ifood:hover {
+    background: #ea1d2c;
+    box-shadow: 0 0 30px 0px #ea1d2c;
+}
+
+.whatsapp:hover {
+    background: #49c858;
+    box-shadow: 0 0 30px 0px #49c858;
+}
+
+.botao-rede:focus {
+    outline: none;
+}
+
+.botao-rede:active * {
+    transform: scale(0.85);
+}
+
+a {
+    text-decoration: none;
+}
+
+span.esconder {
+    display: none;
+}
+
+.local {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* https://codepen.io/aybukeceylan/pen/RwrRPoO */
+
+.caixa-carrossel {
+    display: block;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.card {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    right: 100px;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.card img {
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+#item-1:checked~.cards #song-3,
+#item-2:checked~.cards #song-1,
+#item-3:checked~.cards #song-2 {
+    transform: translatex(-40%) scale(.4);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-2,
+#item-2:checked~.cards #song-3,
+#item-3:checked~.cards #song-1 {
+    transform: translatex(40%) scale(.4);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-1,
+#item-2:checked~.cards #song-2,
+#item-3:checked~.cards #song-3 {
+    transform: translatex(0) scale(.5);
+    opacity: 1;
+    z-index: 1;
+
+    img {
+        box-shadow: 0px 0px 500px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.design {
+    position: absolute;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bolder;
+    color: #e4e4e4;
+}
+
+.design span {
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.design svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0px 0px 2px 0px;
+    fill: #e4e4e4;
+}
+
+.design svg:hover {
+    fill: #0066cc;
+}
